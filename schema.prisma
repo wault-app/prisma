@@ -58,7 +58,7 @@ model EmailConfirmation {
 
 model Device {
     id         String      @id @default(cuid()) @map("_id")
-    secret     String // the secret of the refresh token
+    secret     String? // the secret of the refresh token
     name       String?
     type       DeviceType?
     loggedInAt DateTime    @default(now()) @map("logged_in_at")
